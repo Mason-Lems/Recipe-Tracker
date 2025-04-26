@@ -6,7 +6,7 @@ export class LoginPage extends BaseComponent {
 
     constructor() {
         super();
-        this.loadCSS("login", "login.css");
+        this.loadCSS("src/pages/login", "login");
     }
 
     render(): HTMLElement { 
