@@ -1,5 +1,5 @@
 import { BaseComponent } from '@/components/baseComponent';
-import { Events, EventHub} from "@/lib/eventhub/index";
+//import { Events, EventHub} from "@/lib/eventhub/index";
 
 export class LoginPage extends BaseComponent {
     #container: HTMLElement | null = null;
@@ -33,5 +33,5 @@ export class LoginPage extends BaseComponent {
     #attachEventListeners(): void {
         if (!this.#container) return;
     }
-    
+
 }
