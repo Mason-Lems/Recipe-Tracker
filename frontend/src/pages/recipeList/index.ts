@@ -16,7 +16,7 @@ export class RecipeListPage extends BaseComponent {
         this.#recipeList = new RecipeListComponent();
     }
 
-    render() {
+    render(): HTMLElement {
         if (this.#container) return this.#container;
 
         this.#container = document.createElement("div");
@@ -27,7 +27,7 @@ export class RecipeListPage extends BaseComponent {
         return this.#container;
     }
 
-    #setupContainerContent() {
+    #setupContainerContent(): void {
         if (!this.#container) return;
 
         //Create header section
@@ -46,7 +46,7 @@ export class RecipeListPage extends BaseComponent {
         this.#container.appendChild(mainContent);
     }
 
-    #attachEventListeners() {
+    #attachEventListeners(): void {
         const hub = EventHub.getInstance();
 
         //subscribe to relevant events
@@ -54,7 +54,7 @@ export class RecipeListPage extends BaseComponent {
     }
 
     // method to set recipes in the recipe list component
-    setRecipes(recipes: RecipeData[]) {
+    setRecipes(recipes: RecipeData[]): void {
         recipes.forEach(recipe => {
             const hub = EventHub.getInstance();
             hub.publish(Events.NewRecipe, recipe);
