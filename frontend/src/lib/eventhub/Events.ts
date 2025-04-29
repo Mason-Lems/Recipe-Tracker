@@ -5,6 +5,7 @@
 
 export const Events = {
     NewRecipe: "NewRecipe",
+    StoreRecipe: "StoreRecipe",
     RecipeUpdated: "RecipeUpdated",
     RecipeDeleted: "RecipeDeleted",
 

@@ -4,4 +4,5 @@ export interface RecipeData {
     description: string;
     ingredients: object;
     instructions: Array<string>;
+    url?: string;
 }
