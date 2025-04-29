@@ -1,7 +1,7 @@
-import { RecipeListPage } from "@/pages/recipeList";
-import { LoginPage } from "@/pages/login";
+import { RecipeListPage } from "@/pages/recipeList/index";
+import { LoginPage } from "@/pages/login/index";
 import { BaseComponent } from "@/components/baseComponent";
-import { NavBar } from "@/components/Navbar";
+import { NavBar } from "@/components/Navbar/index";
 import { Events, EventHub } from "@/lib/eventhub/index";
 
 export default class App {
