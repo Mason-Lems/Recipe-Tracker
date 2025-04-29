@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
 }
 
 .app {
@@ -12,4 +14,45 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: blue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    z-index: 1000;
+    
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar li {
+    padding: 10px 20px;
+    border-radius: 5px; 
+}
+
+.navbar li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
 }
