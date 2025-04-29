@@ -1,4 +1,4 @@
-export interface Recipe {
+export interface RecipeData {
     id: Int16Array;
     name: string;
     description: string;
