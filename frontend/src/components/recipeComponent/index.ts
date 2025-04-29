@@ -1,13 +1,13 @@
 import { BaseComponent } from "@/components/baseComponent";
-import { Recipe } from "@/lib/models/recipe";
+import { RecipeData } from "@/lib/models/recipe";
 
 export class RecipeComponent extends BaseComponent {
-    recipe: any;
+    recipeData: RecipeData;
     #container: HTMLElement | null = null;
 
-    constructor(recipe: Recipe) {
+    constructor(recipeData: RecipeData) {
         super();
-        this.recipe = recipe;
+        this.recipeData = recipeData;
         this.loadCSS("src/components/recipeListComponent", "styles");
     }
 
@@ -31,8 +31,8 @@ export class RecipeComponent extends BaseComponent {
         const recipeText = document.createElement("div");
         recipeText.classList.add("recipe-text");
         recipeText.innerHTML = `
-            <h3>${this.recipe.name}</h3>
-            <p>${this.recipe.description}</p>
+            <h3>${this.recipeData.name}</h3>
+            <p>${this.recipeData.description}</p>
         `;
         return recipeText;
     }
