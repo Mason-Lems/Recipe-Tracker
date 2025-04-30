@@ -1,12 +1,11 @@
 import { BaseComponent } from '@/components/baseComponent';
 //import { Events, EventHub} from "@/lib/eventhub/index";
-
+import "./styles.css";
 export class LoginPage extends BaseComponent {
     #container: HTMLElement | null = null;
 
     constructor() {
         super();
-        this.loadCSS("src/pages/login", "login");
     }
 
     render(): HTMLElement { 

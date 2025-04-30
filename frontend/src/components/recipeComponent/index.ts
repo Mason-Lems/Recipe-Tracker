@@ -1,5 +1,6 @@
 import { BaseComponent } from "@/components/baseComponent";
 import { RecipeData } from "@/lib/models/recipe";
+import "./styles.css";
 
 export class RecipeComponent extends BaseComponent {
     recipeData: RecipeData;
@@ -8,7 +9,6 @@ export class RecipeComponent extends BaseComponent {
     constructor(recipeData: RecipeData) {
         super();
         this.recipeData = recipeData;
-        this.loadCSS("src/components/recipeListComponent", "styles");
     }
 
     render(): HTMLElement { 

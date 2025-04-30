@@ -2,13 +2,12 @@ import { BaseComponent } from "@/components/baseComponent";
 import { RecipeComponent } from "@/components/recipeComponent";
 import { Events, EventHub } from "@/lib/eventhub/index";
 import { RecipeData } from "@/lib/models/recipe";
-
+import "./styles.css";
 export class RecipeListComponent extends BaseComponent {
     #container: HTMLElement | null = null;
 
     constructor() {
         super();
-        this.loadCSS("src/components/recipeListComponent", "styles");
     }
 
     // Renders the component and returns the container element

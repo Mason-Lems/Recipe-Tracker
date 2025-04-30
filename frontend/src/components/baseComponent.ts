@@ -1,9 +1,7 @@
 export abstract class BaseComponent {
-    cssLoaded: boolean;
     parent: HTMLElement;
 
     constructor() {
-        this.cssLoaded = false;
         this.parent = document.createElement("div");
     }
 
@@ -14,17 +12,6 @@ export abstract class BaseComponent {
      */
     render(): HTMLElement {
         throw new Error("Method 'render()' must be implemented.");
-    }
-
-    loadCSS(path: string, fileName: string): void {
-        if (this.cssLoaded) return;
-
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.type = "text/css";
-        link.href = `${path}/${fileName}`;
-        document.head.appendChild(link);
-        this.cssLoaded = true;
     }
 
     dispacthCustomEvent(eventName: string, detail = {}): void {

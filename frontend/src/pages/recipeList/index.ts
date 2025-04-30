@@ -3,6 +3,7 @@ import { Events, EventHub } from "@/lib/eventhub/index";
 import { RecipeData } from "@/lib/models/recipe";
 import { RecipeInputComponent } from "@/components/recipeInputComponent";
 import { RecipeListComponent } from "@/components/recipeListComponent";
+import "./styles.css";
 
 export class RecipeListPage extends BaseComponent {
     #container: HTMLElement | null = null;
@@ -11,7 +12,6 @@ export class RecipeListPage extends BaseComponent {
 
     constructor() {
         super();
-        this.loadCSS("src/pages/recipeList", "styles");
         this.#recipeInput = new RecipeInputComponent();
         this.#recipeList = new RecipeListComponent();
     }

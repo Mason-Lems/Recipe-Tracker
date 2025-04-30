@@ -1,12 +1,12 @@
 import { EventHub, Events } from "@/lib/eventhub";
 import { BaseComponent } from "@/components/baseComponent";
+import "./styles.css";
 
 export class RecipeInputComponent extends BaseComponent {
     #container: HTMLElement | null = null;
 
     constructor() {
         super();
-        this.loadCSS("src/components/recipeInputComponent", "styles");
     }
 
     render() {
