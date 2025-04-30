@@ -27,16 +27,19 @@ export class NavBar extends BaseComponent {
         `;
 
         // Get all anchor tags in the element
-        const links = container.querySelectorAll("a");
+        const listItem = container.querySelectorAll("li");
 
         // Add event listeners to each link
-        links.forEach((link) => {
-            link.addEventListener("click", async (e) => {
+        listItem.forEach((li) => {
+            li.addEventListener("click", async (e) => {
                 // Prevent default link behavior
                 e.preventDefault();
                 if (!this.#hub) return;
 
                 //Get the page name from the href attribute
+                const link = li.querySelector("a") as HTMLAnchorElement;
+                if (!link) return;
+                
                 const page = link.getAttribute("href");
 
                 this.#hub.publish(Events.NavigateTo, page);

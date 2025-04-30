@@ -1,18 +1,43 @@
-.page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+#root {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Inter', 'Segoe UI', 'sans-serif';
 }
 
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
+#page-container {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+#page-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#page-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+#page-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+* {
+    outline: 1px solid red;
+}
