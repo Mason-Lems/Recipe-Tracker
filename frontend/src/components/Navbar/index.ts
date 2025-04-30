@@ -1,5 +1,6 @@
 import { Events, EventHub } from "@/lib/eventhub/index";
 import { BaseComponent } from "@/components/baseComponent";
+import "./styles.css";
 
 export class NavBar extends BaseComponent {
     #hub: EventHub | null = null;
@@ -10,7 +11,6 @@ export class NavBar extends BaseComponent {
     }
 
     render(): HTMLElement { 
-
         // Create the navbar container
         const container = document.createElement("nav");
         container.id = "navbar";
