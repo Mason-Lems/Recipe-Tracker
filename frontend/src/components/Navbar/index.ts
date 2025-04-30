@@ -7,7 +7,7 @@ export class NavBar extends BaseComponent {
     constructor() {
         super();
         this.#hub = EventHub.getInstance();
-        this.loadCSS("src/components/Navbar", "navbar");
+        this.loadCSS("src/components/Navbar", "style");
     }
 
     render(): HTMLElement { 

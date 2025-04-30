@@ -23,6 +23,7 @@ export abstract class BaseComponent {
         link.rel = "stylesheet";
         link.type = "text/css";
         link.href = `${path}/${fileName}`;
+        document.head.appendChild(link);
         this.cssLoaded = true;
     }
 
